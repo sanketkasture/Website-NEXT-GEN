@@ -1,0 +1,679 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Create Campaign</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" type="text/css" href="your_website_domain/css_root/flaticon.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">	
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+  
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
+  <link rel="stylesheet" type="text/css" href="./css/ctm-nav.css">
+  <link rel="stylesheet" type="text/css" href="./css/custom.css">
+  <link rel="stylesheet" type="text/css" href="https://laravel.spruko.com/dashlead/Leftmenu-Icon-Light/assets/plugins/flag-icon-css/css/flag-icon.min.css">
+
+</head>
+<style type="text/css">
+	body {
+       background: #f8f8f8; font-family: 'Inter';
+}
+</style>
+<body>
+
+<div class="create-camp-page">	
+	
+
+<!--===================
+  Header
+=======================-->
+
+<header class="header">
+    <nav class="navbar navbar-toggleable-md navbar-light pt-0 pb-0 ">          
+
+        <div class="float-left">
+              <a href="#" class="button-left">
+                <!-- <span class="fa fa-fw fa-bars "></span> -->
+                <svg class="svg-icon" viewBox="0 0 20 20">
+              <path fill="none" d="M1.683,3.39h16.676C18.713,3.39,19,3.103,19,2.749s-0.287-0.642-0.642-0.642H1.683
+                c-0.354,0-0.641,0.287-0.641,0.642S1.328,3.39,1.683,3.39z M1.683,7.879h11.545c0.354,0,0.642-0.287,0.642-0.641
+                s-0.287-0.642-0.642-0.642H1.683c-0.354,0-0.641,0.287-0.641,0.642S1.328,7.879,1.683,7.879z M18.358,11.087H1.683
+                c-0.354,0-0.641,0.286-0.641,0.641s0.287,0.642,0.641,0.642h16.676c0.354,0,0.642-0.287,0.642-0.642S18.713,11.087,18.358,11.087z
+                 M11.304,15.576H1.683c-0.354,0-0.641,0.287-0.641,0.642s0.287,0.641,0.641,0.641h9.621c0.354,0,0.642-0.286,0.642-0.641
+                S11.657,15.576,11.304,15.576z"></path>
+            </svg>
+              </a>
+
+              <div class="header-main-logo">
+                <a href="index.html">
+                  <img src="./assets/dark-logo.png" class="image-responsive menu">
+                </a>
+            </div>
+
+            <div class="header-search">
+              <span class="certain-category-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search "><g><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></g></svg></span>
+              <input type="text" name="search" class="form-control" placeholder="Search here.."> 
+            </div>
+            </div>
+            
+            <div class="header-right">
+              <div class="sc-iwsKbI iwdehq">
+                <div class="message">
+                  <span class="sc-dnqmqq hKKGSx ant-badge">
+                    <a class="head-example" href="/react/strikingdash/admin">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail ">
+                        <g><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline>
+                        </g>
+                      </svg>
+                      <span class="badge badge-secondary pulse-secondary">5</span>
+                    </a>
+                    <sup data-show="true" class="ant-scroll-number ant-badge-dot" style="right: 8px; margin-top: -5px;"></sup>
+                  </span>
+                </div>
+                <div class="notification">
+                  <span class="sc-dnqmqq hKKGSx ant-badge">
+                    <a class="head-example" href="/react/strikingdash/admin">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bell ">
+                        <g><path d="M22 17H2a3 3 0 0 0 3-3V9a7 7 0 0 1 14 0v5a3 3 0 0 0 3 3zm-8.27 4a2 2 0 0 1-3.46 0"></path></g>
+                      </svg>
+                      <span class="badge badge-secondary pulse-secondary danger">3</span>
+                    </a>
+              <sup data-show="true" class="ant-scroll-number ant-badge-dot" style="right: 8px; margin-top: -5px;"></sup>
+            </span>
+          </div>
+          <div class="settings">
+            <a class="head-example sc-dnqmqq hKKGSx" href="/react/strikingdash/admin">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-settings ">
+                <g>
+                  <circle cx="12" cy="12" r="3"></circle>
+                  <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                </g>
+              </svg>
+            </a>
+          </div>
+
+          <div class="support">
+              <a class="head-example sc-dnqmqq hKKGSx" href="/react/strikingdash/admin">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-help-circle ">
+                      <g><circle cx="12" cy="12" r="10"></circle>
+                        <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                        <line x1="12" y1="17" x2="12" y2="17"></line>
+                      </g>
+                    </svg>
+              </a>
+          </div>
+          
+          <div class="nav-author">
+            <a class="head-example ant-dropdown-trigger sc-dxgOiQ hRxlbk" href="/react/strikingdash/admin">
+                <img src="./assets/uk_flag.png" class="image-responsive menu">
+              </a>
+          </div>
+          
+          <div class="nav-author">
+                <a class="head-example sc-dnqmqq hKKGSx" href="/react/strikingdash/admin">
+                  <span class="ant-avatar ant-avatar-circle ant-avatar-image">
+                    <img src="./assets/user.png" class="image-responsive menu">
+                  </span>
+                </a>
+          </div>
+          </div>
+        
+        </div>            
+    </nav>
+</header>
+
+<div class="main">
+        <aside>
+          <div class="sidebar left ">
+           
+              <ul class="list-sidebar bg-defoult">
+                <li> <a href="index.html" >
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home "><g><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></g></svg> <span class="nav-label"> Dashboards </span> </a>  
+                </li>
+
+                <li> <a href="walker.html" class="active-nav"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-layout "><g><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></g></svg><span class="nav-label">Walker</span></a> </li>
+
+
+                <li> <a href="campaign.html"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-airplay "><g><path d="M5 17H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-1"></path><polygon points="12 15 17 21 7 21 12 15"></polygon></g></svg> <span class="nav-label">Campaigns</span></a> </li>
+
+                <li> <a href="mng-campaign-stats.html"> <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-book injected-svg" data-src="/react/strikingdash/static/media/book.b40767c7.svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg> <span class="nav-label">Campaign Statistics</span> </a></li>
+
+                <li> <a href="camp-reports.html" > <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file "><g><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline></g></svg> <span class="nav-label">Reports</span></a>
+              </li>
+
+              <li> <a href="csv-upload.html"> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-upload "><g><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></g></svg> <span class="nav-label">CSV Upload</span></a>
+              </li>           
+
+              <li> <a href="notification.html"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bell "><g><path d="M22 17H2a3 3 0 0 0 3-3V9a7 7 0 0 1 14 0v5a3 3 0 0 0 3 3zm-8.27 4a2 2 0 0 1-3.46 0"></path></g></svg> <span class="nav-label">Notifications</span> </a></li>
+
+
+              <li> <a href="change-password.html"> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-lock "><g><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></g></svg> <span class="nav-label">Change Password</span></a> </li>
+
+
+              <li> <a href="walker-script.html"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-settings "><g><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></g></svg> <span class="nav-label">Walker Script</span></a> </li>
+          
+
+              <li> <a href="add-voter.html"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user-plus "><g><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><line x1="20" y1="8" x2="20" y2="14"></line><line x1="23" y1="11" x2="17" y2="11"></line></g></svg> <span class="nav-label">Add Voter</span></a> </li>
+            </ul>
+          </div>
+      </aside>
+</div>
+
+<!--===================
+  Header
+=======================-->
+
+	
+
+	<section class="top-sec1">
+		<div class="container">
+			<div class="dash-header">
+				<div class="row">
+					<div class="col-md-6">
+						<h3>Create Campaign</h3>
+					</div>
+
+					<div class="col-md-6">
+						<!-- <button type="button" class="btn btn-primary my-2 btn-icon-text"> <i class="fa fa-plus" aria-hidden="true"></i> Create Walker </button> -->
+					</div>
+				</div>
+      </div>	
+		</div>
+	</section>
+
+  <section class="report-body">
+      <div class="container">
+        <div class="notification-form">
+
+        <!-- Nav tabs -->
+          <ul class="nav nav-tabs" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" data-toggle="tab" href="#home"> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-layers "><g><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></g></svg>  Basic</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="tab" href="#menu1"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user-plus "><g><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><line x1="20" y1="8" x2="20" y2="14"></line><line x1="23" y1="11" x2="17" y2="11"></line></g></svg>  Select Precincts</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="tab" href="#menu2"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-book injected-svg"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg> Assign Walkers</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="tab" href="#menu3"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-paperclip "><g><path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"></path></g></svg> Survey</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="tab" href="#menu3"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file "><g><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline></g></svg> Reports</a>
+            </li>
+
+
+          </ul>
+
+          <!-- Tab panes -->
+          <div class="tab-content">
+            <div id="home" class="container tab-pane active"><br>
+              <form>
+                <div class="row">
+                  <div class="col-md-8">
+                    <div class="form-group">
+                      <label>Campaign Name</label>
+                        <input type="text" class="form-control" placeholder="Enter Campaign Name">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-8">
+                    <label>Campaign Description</label>
+                    <textarea rows="5" class="form-control" name="description" placeholder="Campaign Description"></textarea>
+                  </div>
+                </div> 
+
+                <div class="row mt-3">
+                  <div class="col-md-5">
+                      <label>Voice Script</label>
+                      <div class="ctm-ddl-grp">
+                          <div class="dropdown ddl1">
+                            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                              None Selected
+                            </button>
+                            <div class="dropdown-menu">
+                              <a class="dropdown-item" href="#">Link 1</a>
+                              <a class="dropdown-item" href="#">Link 2</a>
+                              <a class="dropdown-item" href="#">Link 3</a>
+                            </div>
+                          </div>
+                          <div class="dropdown">
+                            <button type="button" class="btn btn-primary">Create Walker Script</button> 
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="col-md-5 ctm-rdo-btn">
+                    <label>Campaign Type</label>
+                      <div class="row">
+                        <div class="col-sm-6 form-group">
+                          <div class="radio">
+                            <label>
+                              <input type="radio" id="normalCamp" name="camp_type" value="0" required="">Normal Campaign</label>
+                          </div>
+                        </div>
+
+                        <div class="col-sm-6 form-group">
+                          <div class="radio">
+                            <label>
+                              <input type="radio" id="normalCamp" name="camp_type" value="0" required="">Normal Campaign</label>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+
+                <div class="row mt-4">
+
+                  <div class="col-md-3">
+                    <div class="input-group date" data-provide="datepicker">
+                      <label>Start Date</label>
+                        <input type="date" class="form-control">
+                        
+                    </div>
+                  </div>
+
+                  <div class="col-md-3">
+                    <div class="input-group date" data-provide="datepicker">
+                        <label>End Date</label>
+                        <input type="date" class="form-control">
+                        
+                    </div>
+                  </div>
+
+                  <div class="col-md-3">
+                    <div class="input-group">
+                      <label>Target # of Contacts</label>
+                        <input type="number" class="form-control">
+                        
+                    </div>
+                  </div>
+
+                  <div class="col-md-3">
+                    <label>Image</label>
+                    <div class="custom-file">
+
+                      <input type="file" class="custom-file-input" id="customFile">
+                      <label class="custom-file-label" for="customFile">Choose file</label>
+                    </div>  
+                  </div>
+                </div>
+               
+                <div class="next-btn">
+                    <button type="button" class="btn btn-default">Next <svg class="svg-icon" viewBox="0 0 20 20">
+                        <path fill="none" d="M1.729,9.212h14.656l-4.184-4.184c-0.307-0.306-0.307-0.801,0-1.107c0.305-0.306,0.801-0.306,1.106,0
+                        l5.481,5.482c0.018,0.014,0.037,0.019,0.053,0.034c0.181,0.181,0.242,0.425,0.209,0.66c-0.004,0.038-0.012,0.071-0.021,0.109
+                        c-0.028,0.098-0.075,0.188-0.143,0.271c-0.021,0.026-0.021,0.061-0.045,0.085c-0.015,0.016-0.034,0.02-0.051,0.033l-5.483,5.483
+                        c-0.306,0.307-0.802,0.307-1.106,0c-0.307-0.305-0.307-0.801,0-1.105l4.184-4.185H1.729c-0.436,0-0.788-0.353-0.788-0.788
+                        S1.293,9.212,1.729,9.212z"></path>
+                      </svg>
+                    </button>
+                </div>              
+
+              </form>
+            </div>
+
+            <div id="menu1" class="container tab-pane fade walk-tab">
+                <div class="row">
+                  <div class="col-md-10 mt-1 mb-1">
+                    <div class="row ctm-rdo-btn">
+                        <div class="col-sm-4 form-group">
+                          <div class="radio">
+                            <label>
+                              <input type="radio" id="normalCamp" name="camp_type" value="0" required="">I want to Select 'CSV'List</label>
+                          </div>
+                        </div>
+
+                        <div class="col-sm-8 form-group">
+                          <div class="radio">
+                            <label>
+                              <input type="radio" id="normalCamp" name="camp_type" value="0" required="">I want to select precinct from an existing campaign</label>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                </div>   
+
+                <div class="row">
+                  <div class="walker-det-table">
+                    <div class="row tbl-top-search">
+                    <div class="col-md-9">
+                      <div class="show-rslt">
+                        <span>Show</span>
+                        <div class="form-group">
+                          <select class="form-control" id="sel1">
+                            <option>10</option>
+                            <option>20</option>
+                            <option>30</option>
+                          </select>
+                        </div>
+                        <span>Entries</span>
+                      </div>
+                    </div>
+
+                    <div class="col-md-3">
+                      <div class="header-search">
+                            <span class="certain-category-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search "><g><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></g></svg></span>
+                            <input type="text" name="search" class="form-control" placeholder="Search here.."> 
+                      </div>
+                    </div>
+                  </div>
+
+                    <div class="table-outer">
+                      <div id="example1_wrapper" class="dataTables_wrapper no-footer"><div class="dataTables_length" id="example1_length"><label>Show <select name="example1_length" aria-controls="example1" class=""><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label></div><div id="example1_filter" class="dataTables_filter"><label>Search:<input type="search" class="" placeholder="" aria-controls="example1"></label></div><table id="example1" class="table table-striped table-bordered dataTable no-footer" style="width:100%" role="grid" aria-describedby="example1_info">
+                            <thead>
+                                <tr role="row">
+                                  <th class="sorting_asc">Sr No.</th>
+                                  <th class="sorting">List</th>
+                                  <th class="sorting">Precinct</th>
+                                  <th style="width: 117px;" class="sorting" >No. of Houses</th>
+                                  <th style="width: 116px;" class="sorting">No. of Voters</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="odd">
+                                    <td class="sorting_1">
+                                      <label class="ctm-checkbox">
+                                        <input type="checkbox" checked="checked">
+                                        <span class="checkmark"></span>
+                                      </label>
+                                    </td>
+                                    <td>It is a long established fact that a reader will page when looking at its layout.</td>
+                                    <td>1452</td>
+                                    <td>58</td>
+                                    <td>101</td>
+                                </tr><tr class="even">
+                                    <td class="sorting_1">
+                                      <label class="ctm-checkbox">
+                                        <input type="checkbox" checked="checked">
+                                        <span class="checkmark"></span>
+                                      </label>
+                                    </td>
+                                    <td>The point of be distracted by the readable</td>
+                                    <td>1452</td>
+                                    <td>58</td>
+                                    <td>101</td>
+                                </tr><tr class="odd">
+                                    <td class="sorting_1">
+                                      <label class="ctm-checkbox">
+                                        <input type="checkbox" checked="checked">
+                                        <span class="checkmark"></span>
+                                      </label>
+                                    </td>
+                                    <td>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</td>
+                                    <td>1452</td>
+                                    <td>58</td>
+                                    <td>101</td>
+                                </tr><tr class="even">
+                                    <td class="sorting_1">
+                                      <label class="ctm-checkbox">
+                                        <input type="checkbox" checked="checked">
+                                        <span class="checkmark"></span>
+                                      </label>
+                                    </td>
+                                    <td>There are many variations of passages of Lorem Ipsum available</td>
+                                    <td>1452</td>
+                                    <td>58</td>
+                                    <td>101</td>
+                                </tr><tr class="odd">
+                                    <td class="sorting_1">
+                                      <label class="ctm-checkbox">
+                                        <input type="checkbox" checked="checked">
+                                        <span class="checkmark"></span>
+                                      </label>
+                                    </td>
+                                    <td>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece</td>
+                                    <td>1452</td>
+                                    <td>58</td>
+                                    <td>101</td>
+                                </tr><tr class="even">
+                                    <td class="sorting_1">
+                                      <label class="ctm-checkbox">
+                                        <input type="checkbox" checked="checked">
+                                        <span class="checkmark"></span>
+                                      </label>
+                                    </td>
+                                    <td>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested</td>
+                                    <td>1452</td>
+                                    <td>58</td>
+                                    <td>101</td>
+                                </tr></tbody>
+                            
+                        </table><div class="dataTables_info" id="example1_info" role="status" aria-live="polite">Showing 1 to 6 of 6 entries</div><div class="dataTables_paginate paging_simple_numbers" id="example1_paginate"><a class="paginate_button previous disabled" aria-controls="example1" data-dt-idx="0" tabindex="-1" id="example1_previous">Previous</a><span><a class="paginate_button current" aria-controls="example1" data-dt-idx="1" tabindex="0">1</a></span><a class="paginate_button next disabled" aria-controls="example1" data-dt-idx="2" tabindex="-1" id="example1_next">Next</a></div></div>
+                        <div class="ctm-pagi">
+                        <ul class="pagination pagination-md">
+                          <li class="page-item active" aria-current="page">
+                            <span class="page-link">
+                              1
+                              <span class="sr-only">(current)</span>
+                            </span>
+                          </li>
+                          <li class="page-item"><a class="page-link" href="#">2</a></li>
+                          <li class="page-item"><a class="page-link" href="#">3</a></li>
+                          <li class="page-item"><a class="page-link" href="#">4</a></li>
+                          <li class="page-item"><a class="page-link" href="#">5</a></li>
+                          <li class="page-item"><a class="page-link" href="#">6</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>     
+            </div>
+            
+            <div id="menu2" class="container tab-pane fade crt-wlk">
+                <div class="walker-det-table">
+                  <div class="row tbl-top-search">
+                    <div class="col-md-9">
+                      <div class="show-rslt">
+                        <span>Show</span>
+                        <div class="form-group">
+                          <select class="form-control" id="sel1">
+                            <option>10</option>
+                            <option>20</option>
+                            <option>30</option>
+                          </select>
+                        </div>
+                        <span>Entries</span>
+                      </div>
+                    </div>
+
+                    <div class="col-md-3">
+                      <div class="header-search">
+                            <span class="certain-category-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search "><g><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></g></svg></span>
+                            <input type="text" name="search" class="form-control" placeholder="Search here.."> 
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div class="table-outer">
+                    <table id="example2" class="table table-striped table-bordered" style="width:100%">
+                          <thead>
+                              <tr>
+                                  <th>Precinct</th>
+                                  <th>No of Houses</th>
+                                  <th>No of Voters</th>
+                                  <th style="width: 150px;">Assigned Houses</th>
+                                  <th style="width: 150px;">Select Walkers</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <tr>
+                                  <td>17402</td>
+                                  <td>58</td>
+                                  <td>1452</td>
+                                  <td>58</td>
+                                  <td><button type="button" class="btn btn-primary">Assign Walker</button></td>
+                              </tr>
+
+                              <tr>
+                                  <td>17402</td>
+                                  <td>58</td>
+                                  <td>1452</td>
+                                  <td>58</td>
+                                  <td><button type="button" class="btn btn-primary">Assign Walker</button></td>
+                              </tr>
+
+                              <tr>
+                                  <td>17402</td>
+                                  <td>58</td>
+                                  <td>1452</td>
+                                  <td>58</td>
+                                  <td><button type="button" class="btn btn-primary">Assign Walker</button></td>
+                              </tr>
+
+                              <tr>
+                                  <td>17402</td>
+                                  <td>58</td>
+                                  <td>1452</td>
+                                  <td>58</td>
+                                  <td><button type="button" class="btn btn-primary">Assign Walker</button></td>
+                              </tr>
+
+                              
+                               
+
+                          </tbody>
+                          
+                      </table>
+                      <div class="ctm-pagi">
+                      <ul class="pagination pagination-md">
+                        <li class="page-item active" aria-current="page">
+                          <span class="page-link">
+                            1
+                            <span class="sr-only">(current)</span>
+                          </span>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                        <li class="page-item"><a class="page-link" href="#">5</a></li>
+                        <li class="page-item"><a class="page-link" href="#">6</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+            <div id="menu3" class="container tab-pane fade preview-tab"><br>
+                <div class="clone-survey-sec">
+                  <h6>Do you want to ..</h6>
+                  <div class="btn-group1">
+                    <button type="button" class="btn btn-primary"><i class="fa fa-clone" aria-hidden="true"></i> Clone Survey</button>
+                    <h5>OR</h5>
+                    <button type="button" class="btn btn-primary"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus "><g><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></g></svg> Create New Survey</button>
+                  </div>
+                </div>
+            </div>
+
+            <div id="menu4" class="container tab-pane fade preview-tab"><br>
+              
+            </div>
+           
+          </div>
+
+          
+      </div>
+      </div>
+  </section>
+
+  <!-- The Modal -->
+  <div class="modal fade" id="myModal">
+    <div class="modal-dialog walker-popup" >
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h6 class="modal-title">View Response</h6>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>     
+        </div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+        
+      
+      </div>
+    </div>
+  </div>
+
+	
+	
+</div>
+
+
+
+	<script type="text/javascript">
+		$(function() {
+
+  $(".progress").each(function() {
+
+    var value = $(this).attr('data-value');
+    var left = $(this).find('.progress-left .progress-bar');
+    var right = $(this).find('.progress-right .progress-bar');
+
+    if (value > 0) {
+      if (value <= 50) {
+        right.css('transform', 'rotate(' + percentageToDegrees(value) + 'deg)')
+      } else {
+        right.css('transform', 'rotate(180deg)')
+        left.css('transform', 'rotate(' + percentageToDegrees(value - 50) + 'deg)')
+      }
+    }
+
+  })
+
+  function percentageToDegrees(percentage) {
+
+    return percentage / 100 * 360
+
+  }
+
+});
+
+
+$(document).ready(function() {
+    $('#example').DataTable();
+} );
+
+$(document).ready(function() {
+    $('#example1').DataTable();
+} );
+
+$(document).ready(function() {
+    $('#example2').DataTable();
+} );
+
+$(document).ready(function() {
+    $('#example3').DataTable();
+} );
+
+
+$(document).ready(function(){
+   $('.button-left').click(function(){
+       $('.sidebar').toggleClass('fliph');
+   });
+     
+});
+
+</script>
+</body>
+</html>

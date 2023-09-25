@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Manage Walker Scripts</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" type="text/css" href="your_website_domain/css_root/flaticon.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+  
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
+  <link rel="stylesheet" type="text/css" href="./css/ctm-nav.css">
+  <link rel="stylesheet" type="text/css" href="./css/custom.css">
+  <link rel="stylesheet" type="text/css" href="https://laravel.spruko.com/dashlead/Leftmenu-Icon-Light/assets/plugins/flag-icon-css/css/flag-icon.min.css">
+
+</head>
+<style type="text/css">
+  body {
+       background: #f8f8f8; font-family: 'Inter';
+}
+</style>
+<body>
+
+<div class="walker-page walk-script-page"> 
+  
+  <!--===================
+  Header
+=======================-->
+
+<header class="header">
+    <nav class="navbar navbar-toggleable-md navbar-light pt-0 pb-0 ">          
+
+        <div class="float-left">
+              <a href="#" class="button-left">
+                <!-- <span class="fa fa-fw fa-bars "></span> -->
+                <svg class="svg-icon" viewBox="0 0 20 20">
+              <path fill="none" d="M1.683,3.39h16.676C18.713,3.39,19,3.103,19,2.749s-0.287-0.642-0.642-0.642H1.683
+                c-0.354,0-0.641,0.287-0.641,0.642S1.328,3.39,1.683,3.39z M1.683,7.879h11.545c0.354,0,0.642-0.287,0.642-0.641
+                s-0.287-0.642-0.642-0.642H1.683c-0.354,0-0.641,0.287-0.641,0.642S1.328,7.879,1.683,7.879z M18.358,11.087H1.683
+                c-0.354,0-0.641,0.286-0.641,0.641s0.287,0.642,0.641,0.642h16.676c0.354,0,0.642-0.287,0.642-0.642S18.713,11.087,18.358,11.087z
+                 M11.304,15.576H1.683c-0.354,0-0.641,0.287-0.641,0.642s0.287,0.641,0.641,0.641h9.621c0.354,0,0.642-0.286,0.642-0.641
+                S11.657,15.576,11.304,15.576z"></path>
+            </svg>
+              </a>
+
+              <div class="header-main-logo">
+                <a href="index.html">
+                  <img src="./assets/dark-logo.png" class="image-responsive menu">
+                </a>
+            </div>
+
+            <div class="header-search">
+              <span class="certain-category-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search "><g><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></g></svg></span>
+              <input type="text" name="search" class="form-control" placeholder="Search here.."> 
+            </div>
+            </div>
+            
+            <div class="header-right">
+              <div class="sc-iwsKbI iwdehq">
+                <div class="message">
+                  <span class="sc-dnqmqq hKKGSx ant-badge">
+                    <a class="head-example" href="/react/strikingdash/admin">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail ">
+                        <g><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline>
+                        </g>
+                      </svg>
+                      <span class="badge badge-secondary pulse-secondary">5</span>
+                    </a>
+                    <sup data-show="true" class="ant-scroll-number ant-badge-dot" style="right: 8px; margin-top: -5px;"></sup>
+                  </span>
+                </div>
+                <div class="notification">
+                  <span class="sc-dnqmqq hKKGSx ant-badge">
+                    <a class="head-example" href="/react/strikingdash/admin">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bell ">
+                        <g><path d="M22 17H2a3 3 0 0 0 3-3V9a7 7 0 0 1 14 0v5a3 3 0 0 0 3 3zm-8.27 4a2 2 0 0 1-3.46 0"></path></g>
+                      </svg>
+                      <span class="badge badge-secondary pulse-secondary danger">3</span>
+                    </a>
+              <sup data-show="true" class="ant-scroll-number ant-badge-dot" style="right: 8px; margin-top: -5px;"></sup>
+            </span>
+          </div>
+          <div class="settings">
+            <a class="head-example sc-dnqmqq hKKGSx" href="/react/strikingdash/admin">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-settings ">
+                <g>
+                  <circle cx="12" cy="12" r="3"></circle>
+                  <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                </g>
+              </svg>
+            </a>
+          </div>
+
+          <div class="support">
+              <a class="head-example sc-dnqmqq hKKGSx" href="/react/strikingdash/admin">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-help-circle ">
+                      <g><circle cx="12" cy="12" r="10"></circle>
+                        <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                        <line x1="12" y1="17" x2="12" y2="17"></line>
+                      </g>
+                    </svg>
+              </a>
+          </div>
+          
+          <div class="nav-author">
+            <a class="head-example ant-dropdown-trigger sc-dxgOiQ hRxlbk" href="/react/strikingdash/admin">
+                <img src="./assets/uk_flag.png" class="image-responsive menu">
+              </a>
+          </div>
+          
+          <div class="nav-author">
+                <a class="head-example sc-dnqmqq hKKGSx" href="/react/strikingdash/admin">
+                  <span class="ant-avatar ant-avatar-circle ant-avatar-image">
+                    <img src="./assets/user.png" class="image-responsive menu">
+                  </span>
+                </a>
+          </div>
+          </div>
+        
+        </div>            
+    </nav>
+</header>
+
+<div class="main">
+        <aside>
+          <div class="sidebar left ">
+           
+              <ul class="list-sidebar bg-defoult">
+                <li> <a href="index.html" >
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home "><g><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></g></svg> <span class="nav-label"> Dashboards </span> </a>  
+                </li>
+
+                <li> <a href="walker.html"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-layout "><g><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></g></svg><span class="nav-label">Walker</span></a> </li>
+
+
+                <li> <a href="campaign.html"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-airplay "><g><path d="M5 17H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-1"></path><polygon points="12 15 17 21 7 21 12 15"></polygon></g></svg> <span class="nav-label">Campaigns</span></a> </li>
+
+                <li> <a href="mng-campaign-stats.html"> <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-book injected-svg" data-src="/react/strikingdash/static/media/book.b40767c7.svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg> <span class="nav-label">Campaign Statistics</span> </a></li>
+
+                <li> <a href="camp-reports.html" > <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file "><g><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline></g></svg> <span class="nav-label">Reports</span></a>
+              </li>
+
+              <li> <a href="csv-upload.html"> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-upload "><g><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></g></svg> <span class="nav-label">CSV Upload</span></a>
+              </li>           
+
+              <li> <a href="notification.html"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bell "><g><path d="M22 17H2a3 3 0 0 0 3-3V9a7 7 0 0 1 14 0v5a3 3 0 0 0 3 3zm-8.27 4a2 2 0 0 1-3.46 0"></path></g></svg> <span class="nav-label">Notifications</span> </a></li>
+
+
+              <li> <a href="change-password.html"> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-lock "><g><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></g></svg> <span class="nav-label">Change Password</span></a> </li>
+
+
+              <li> <a href="walker-script.html" class="active-nav"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-settings "><g><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></g></svg> <span class="nav-label">Walker Script</span></a> </li>
+          
+
+              <li> <a href="add-voter.html"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user-plus "><g><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><line x1="20" y1="8" x2="20" y2="14"></line><line x1="23" y1="11" x2="17" y2="11"></line></g></svg> <span class="nav-label">Add Voter</span></a> </li>
+            </ul>
+          </div>
+      </aside>
+</div>
+
+<!--===================
+  Header
+=======================-->  
+
+  <section class="top-sec1">
+    <div class="container">
+      <div class="dash-header">
+        <div class="row">
+          <div class="col-md-6">
+            <h3>Manage Walker Scripts</h3>
+          </div>
+
+          <div class="col-md-6">
+            <button type="button" data-toggle="modal" data-target="#myModal1" class="btn btn-primary my-2 btn-icon-text"> <i class="fa fa-plus" aria-hidden="true"></i> Create Walker Script</button>
+          </div>
+        </div>
+      </div>  
+    </div>
+  </section>
+
+  
+  
+  <section class="top-sec-2 sec-3">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-5">
+          <img src="./assets/walker-script.png" class="image-responsive script-img">
+        </div>
+
+        <div class="col-md-7">
+          <div class="walker-det-table">
+            <div class="row tbl-top-search">
+                <div class="col-md-9">
+                          <div class="show-rslt">
+                            <span>Show</span>
+                            <div class="form-group">
+                              <select class="form-control" id="sel1">
+                                <option>10</option>
+                                <option>20</option>
+                                <option>30</option>
+                              </select>
+                            </div>
+                            <span>Entries</span>
+                          </div>
+                </div>
+
+                <div class="col-md-3">
+                          <div class="header-search">
+                                <span class="certain-category-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search "><g><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></g></svg></span>
+                                <input type="text" name="search" class="form-control" placeholder="Search here.."> 
+                          </div>
+                </div>
+              </div>
+            <div class="table-outer">
+              <table id="example1" class="table table-striped table-bordered" style="width:100%">
+                    <thead>
+                        <tr>
+                            <th style="max-width: 50px; width: 70px;">Sr No.</th>
+                            <th>Script Title</th>
+                            <th>Created Date</th>
+                            <th style="max-width: 70px; width: 100px;">Options</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Test Script1</td>
+                            <td>08-03-2020</td>
+                            <td>
+                               <div class="table-actions">
+                                <button type="button" class="ant-btn  btn-icon ant-btn-danger ant-btn-circle">
+                                  <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
+                                </button>
+                                 <button  data-toggle="modal" data-target="#myModal" type="button" class="ant-btn btn-icon ant-btn-info ant-btn-circle">
+                                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit ">
+                                    <g>
+                                      <path d="M20 14.66V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h5.34"></path>
+                                      <polygon points="18 2 22 6 12 16 8 16 8 12 18 2"></polygon>
+                                    </g>
+                                  </svg>
+                                </button>
+                                
+                              </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>1</td>
+                            <td>Test Script1</td>
+                            <td>08-03-2020</td>
+                            <td>
+                               <div class="table-actions">
+                                <button type="button" class="ant-btn  btn-icon ant-btn-danger ant-btn-circle">
+                                  <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
+                                </button>
+                                 <button  data-toggle="modal" data-target="#myModal" type="button" class="ant-btn btn-icon ant-btn-info ant-btn-circle">
+                                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit ">
+                                    <g>
+                                      <path d="M20 14.66V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h5.34"></path>
+                                      <polygon points="18 2 22 6 12 16 8 16 8 12 18 2"></polygon>
+                                    </g>
+                                  </svg>
+                                </button>
+                                
+                              </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>1</td>
+                            <td>Test Script1</td>
+                            <td>08-03-2020</td>
+                            <td>
+                               <div class="table-actions">
+                                <button type="button" class="ant-btn  btn-icon ant-btn-danger ant-btn-circle">
+                                  <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
+                                </button>
+                                 <button  data-toggle="modal" data-target="#myModal" type="button" class="ant-btn btn-icon ant-btn-info ant-btn-circle">
+                                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit ">
+                                    <g>
+                                      <path d="M20 14.66V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h5.34"></path>
+                                      <polygon points="18 2 22 6 12 16 8 16 8 12 18 2"></polygon>
+                                    </g>
+                                  </svg>
+                                </button>
+                                
+                              </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>1</td>
+                            <td>Test Script1</td>
+                            <td>08-03-2020</td>
+                            <td>
+                              <div class="table-actions">
+                                <button type="button" class="ant-btn  btn-icon ant-btn-danger ant-btn-circle">
+                                  <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
+                                </button>
+                                 <button  data-toggle="modal" data-target="#myModal" type="button" class="ant-btn btn-icon ant-btn-info ant-btn-circle">
+                                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit ">
+                                    <g>
+                                      <path d="M20 14.66V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h5.34"></path>
+                                      <polygon points="18 2 22 6 12 16 8 16 8 12 18 2"></polygon>
+                                    </g>
+                                  </svg>
+                                </button>
+                                
+                              </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>1</td>
+                            <td>Test Script1</td>
+                            <td>08-03-2020</td>
+                            <td>
+                              <div class="table-actions">
+                                <button type="button" class="ant-btn  btn-icon ant-btn-danger ant-btn-circle">
+                                  <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
+                                </button>
+                                 <button  data-toggle="modal" data-target="#myModal" type="button" class="ant-btn btn-icon ant-btn-info ant-btn-circle">
+                                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit ">
+                                    <g>
+                                      <path d="M20 14.66V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h5.34"></path>
+                                      <polygon points="18 2 22 6 12 16 8 16 8 12 18 2"></polygon>
+                                    </g>
+                                  </svg>
+                                </button>
+                                
+                              </div>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                    
+                </table>
+                <div class="ctm-pagi">
+                <ul class="pagination pagination-md">
+                  <li class="page-item active" aria-current="page">
+                    <span class="page-link">
+                      1
+                      <span class="sr-only">(current)</span>
+                    </span>
+                  </li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item"><a class="page-link" href="#">4</a></li>
+                  <li class="page-item"><a class="page-link" href="#">5</a></li>
+                  <li class="page-item"><a class="page-link" href="#">6</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- The Modal -->
+  <div class="modal fade" id="myModal">
+    <div class="modal-dialog walker-popup" >
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h6 class="modal-title">Edit Walker Script</h6>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+            <div class="form-group">
+                <label>Title</label>
+                <input type="text" class="form-control error" name="first_name" placeholder="Enter First Name" value=" test4" required="">
+            </div>
+            <div class="form-group">
+                <label>Script Text</label>
+                <textarea class="form-control valid" name="scriptText" rows="5" placeholder="Enter Script Text" required=""></textarea>
+            </div>
+            
+        </div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" data-dismiss="modal">Save</button>
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+        </div>
+        
+      
+      </div>
+    </div>
+  </div>
+
+  <!-- The Modal -->
+  <div class="modal fade" id="myModal1">
+    <div class="modal-dialog walker-popup" >
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h6 class="modal-title">Create New Walker Script</h6>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+            <div class="form-group">
+                <label>Title</label>
+                <input type="text" class="form-control error" name="first_name" placeholder="Enter First Name" required="">
+            </div>
+            <div class="form-group">
+                <label>Script Text</label>
+                <textarea class="form-control valid" name="scriptText" rows="5" placeholder="Enter Script Text" required=""></textarea>
+            </div>
+            
+        </div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" data-dismiss="modal">Save</button>
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+        </div>
+        
+      
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    $(function() {
+
+  $(".progress").each(function() {
+
+    var value = $(this).attr('data-value');
+    var left = $(this).find('.progress-left .progress-bar');
+    var right = $(this).find('.progress-right .progress-bar');
+
+    if (value > 0) {
+      if (value <= 50) {
+        right.css('transform', 'rotate(' + percentageToDegrees(value) + 'deg)')
+      } else {
+        right.css('transform', 'rotate(180deg)')
+        left.css('transform', 'rotate(' + percentageToDegrees(value - 50) + 'deg)')
+      }
+    }
+
+  })
+
+  function percentageToDegrees(percentage) {
+
+    return percentage / 100 * 360
+
+  }
+
+});
+
+
+$(document).ready(function() {
+    $('#example').DataTable();
+} );
+
+$(document).ready(function() {
+    $('#example1').DataTable();
+} );
+
+
+$(document).ready(function(){
+   $('.button-left').click(function(){
+       $('.sidebar').toggleClass('fliph');
+   });
+     
+});
+
+</script>
+</body>
+</html>
